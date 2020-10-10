@@ -38,17 +38,14 @@ body {
   padding: 10px; }
 
 .carousel {
-  background: #512DA8; 
-}
+  background: #512DA8; }
   .carousel .carousel-item {
-    height: 300px; 
-  }
+    height: 300px; }
     .carousel .carousel-item img {
       position: absolute;
       top: 0;
       left: 0;
-      min-height: 300px; 
-    }
+      min-height: 300px; }
 
 #carouselButton {
   right: 0px;
@@ -63,11 +60,9 @@ body {
     color: floralwhite; }
 
 .modal-body {
-  background-color: #D1C4E9; 
-}
+  background-color: #D1C4E9; }
 
-.btn.btn-block.nav-link.btn-md.btn-warning{
-  position: absolute;  
-  left: 15px;  
-  top: -75px;
-}
+.btn.btn-block.nav-link.btn-md.btn-warning {
+  position: absolute;
+  left: 15px;
+  top: -75px; }
