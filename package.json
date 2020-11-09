@@ -9,7 +9,12 @@
     "lite": "lite-server",
     "scss": "node-sass -o css/ css/",
     "watch:scss": "onchange \"css/*.scss\" -- npm run scss",
-    "watch:all": "parallelshell \"npm run watch:scss\" \"npm run lite\""
+    "watch:all": "parallelshell \"npm run watch:scss\" \"npm run lite\"",
+    "clean":"rimraf dist",
+    "copyfonts":"copyfiles -f node_modules/font-awesome/fonts/* dist/fonts",
+    "imagemin":"imagemin img/* -o dist/img",  
+    "usemin":"usemin contactus.html -d dist --htmlmin -o dist/contactus.html && usemin aboutus.html -d dist --htmlmin -o dist/aboutus.html && usemin index.html -d dist --htmlmin -o dist/index.html",
+    "build":"npm run clean && npm run copyfonts && npm run imagemin && npm run usemin"  
   },
   "author": "",
   "license": "ISC",
@@ -17,7 +22,8 @@
     "lite-server": "^2.3.0",
     "node-sass": "^4.14.1",
     "onchange": "^7.0.2",
-    "parallelshell": "^3.0.2"
+    "parallelshell": "^3.0.2",
+    "rimraf": "^3.0.2"
   },
   "dependencies": {
     "bootstrap": "^4.5.0",
@@ -25,5 +31,13 @@
     "font-awesome": "^4.7.0",
     "jquery": "^3.5.1",
     "popper.js": "^1.12.9"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nupur2511/conFusion.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nupur2511/conFusion/issues"
+  },
+  "homepage": "https://github.com/nupur2511/conFusion#readme"
 }
